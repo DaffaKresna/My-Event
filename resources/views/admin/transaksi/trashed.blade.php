@@ -1,0 +1,53 @@
+@extends('admin.layout')
+
+@section('content')
+  <div class="content">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="card card-default">
+          <div class="card-header card-header-border-bottom">
+            <h2>Pesanan yang Dihapus</h2>
+          </div>
+          <div class="card-body">
+            @include('admin.partials.flash')
+            <table class="table table-bordered table-stripped">
+              <thead>
+                  <th>ID Pembayaran</th>
+                  <th>Total</th>
+                  <th>Nama Pelanggan</th>
+                  <th>Status</th>
+                  <th>Pembayaran</th>
+                  <th>Aksi</th>
+              </thead>
+              <tbody>
+                @forelse ($orders as $order)
+                  <tr>    
+                    <td>
+                      {{ $order->kode }}<br>
+                      <span style="font-size: 12px; font-weight: normal"> {{ \General::datetimeFormat($order->tanggal_pemesanan) }}</span>
+                    </td>
+                    <td>Rp. {{ number_format($order->total) }}</td>
+                    <td>
+                      {{ $order->nama_depan }} {{ $order->nama_belakang }}<br>
+                      <span style="font-size: 12px; font-weight: normal"> {{ $order->email_pelanggan }}</span>
+                    </td>
+                    <td>{{ $order->status }}</td>
+                    <td>{{ $order->status_pembayaran }}</td>
+                    <td>
+                      <a href="{{ url('admin/transaksi/'. $order->id) }}" class="btn btn-info btn-sm">Detail</a>
+                    </td>
+                  </tr>
+                @empty
+                  <tr>
+                    <td colspan="6">No records found</td>
+                  </tr>
+                @endforelse
+              </tbody>
+            </table>
+            {{ $orders->links() }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+@endsection

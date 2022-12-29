@@ -1,0 +1,1 @@
+	<script src="{{ asset('admin-kit/assets/js/app.js') }}"></script>

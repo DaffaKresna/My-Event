@@ -1,0 +1,72 @@
+/* HEADER */
+
+.login {
+  cursor: pointer;
+}
+
+.sign-up {
+  border-radius: 10px;
+}
+
+.nav-link.sign-up:hover {
+  color: black !important;
+}
+
+/* Modal */
+
+.login-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1060;
+  display: none;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  outline: 0;
+}
+
+.login-modal .modal-dialog {
+  margin: 1rem;
+  max-width: 100vw;
+}
+
+.login-modal .modal-content {
+  background-color: rgba(0, 0, 0, 0);
+  text-align: center;
+}
+
+.signup-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1060;
+  display: none;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  outline: 0;
+}
+
+.signup-modal .modal-dialog {
+  margin: 1rem;
+  max-width: 100vw;
+}
+
+.signup-modal .modal-content {
+  background-color: rgba(0, 0, 0, 0);
+  text-align: center;
+}
+
+.signup-modal a:hover {
+  cursor: pointer;
+}
+
+/* card-event */
+
+.card-event .card {
+  border: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
