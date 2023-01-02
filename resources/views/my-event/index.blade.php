@@ -19,7 +19,6 @@
             <h2 class="text-center fw-bold">Upcoming Events</h2>
             @forelse ($events as $event)
                 <div class="card mt-5">
-                    <img src="{{ asset('storage/' . $event->eventImages->first()->path) }}" alt="{{ $event->event_name }}" class="card-img-top" alt="..." height="120">
                     <div class="card-body">
                         <div class="row">
                             <div class="col mt-2">
