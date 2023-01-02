@@ -8,7 +8,7 @@
     <!-- Masthead-->
     <header class="masthead">
         <div class="container">
-            <div class="masthead-subheading">Welcome To Our Studio!</div>
+            <div class="masthead-subheading">Welcome To My Event</div>
             <div class="masthead-heading text-uppercase">It's Nice To Meet You</div>
             <a class="btn btn-warning btn-xl text-uppercase" href="#card-event">Tell Me More</a>
         </div>
@@ -19,7 +19,6 @@
             <h2 class="text-center fw-bold">Upcoming Events</h2>
             @forelse ($events as $event)
                 <div class="card mt-5">
-                    <img src="{{ asset('storage/' . $event->eventImages->first()->path) }}" alt="{{ $event->event_name }}" class="card-img-top" alt="..." height="120">
                     <div class="card-body">
                         <div class="row">
                             <div class="col mt-2">

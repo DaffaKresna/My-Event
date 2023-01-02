@@ -8,7 +8,6 @@
     <section class="detail-event">
         <div class="container">
             <div class="card">
-                <img src="{{ asset('storage/' . $event->eventImages->first()->path) }}" alt="{{ $event->event_name }}" class="card-img-top" alt="..." height="150">
                 <div class="card-body">
                     <div class="row">
                         <div class="col-6">
@@ -78,7 +77,7 @@
                         <div class="modal-body">
                             <!-- <p class="text-center">Thank you for your participation</p> -->
                             <p class="text-center">Please transfer ... to the account below</p>
-                            <p class="text-center">Bank Mandiri: Lorem ipsum dolor sit.</p>
+                            <p class="text-center">Bank Mandiri: 0551465542</p>
                             <p class="text-center">A/N: MyEvent</p>
                         </div>
                         <div class="modal-footer border-0 d-flex justify-content-center">
